@@ -1,10 +1,34 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Inicio del Blog";
 ---
 
-<Layout title="Welcome to My Blog.">
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Mi impresionante subtítulo del blog</h2>
+</BaseLayout>
+
+<!-- ---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Social from '../components/Social.astro';
+import Header from '../components/Header.astro';
+
+
+const pagetitle = "Inicio del Blog";
+---
+
+<Layout title= {pagetitle}>
 	<main>
+		<body>
+			<Header />
+			
+			<script>
+			  import "../scripts/menu.js";
+			</script>
+		  </body>
+		
 		<svg
 			class="astro-a"
 			width="495"
@@ -33,10 +57,10 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Mi Blog</a>
-		<h1>Welcome to <span class="text-gradient">My Blog</span></h1>
+		
+
+
+		<h1>{pagetitle}</h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -63,7 +87,8 @@ import Card from '../components/Card.astro';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
-	</main>
+	</main>	
+	<Footer/>
 </Layout>
 
 <style>
@@ -123,4 +148,6 @@ import Card from '../components/Card.astro';
 		gap: 2rem;
 		padding: 0;
 	}
-</style>
+</style> -->
+
+

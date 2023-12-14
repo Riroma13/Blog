@@ -1,10 +1,31 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {Image} from 'astro:assets'
+import MarkdownPostLayout from '../layouts/MarkdownPostLayout.astro';
+
+	
+const pageTitle = "Mis viajes";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Viaje a Portugal</h2>
+</BaseLayout>
+<slot />
+
+<!-- ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pagetitle = "Sobre mi";
 ---
 
 <Layout title="Welcome to My Blog.">
 	<main>
+		<Navigation/>
 		<svg
 			class="astro-a"
 			width="495"
@@ -33,11 +54,15 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-        <a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+        
+
 <h1>My Astro Learning Blog</h1>
 <p>This is where I will post about my journey learning Astro.</p>
+<ul>
+	<li><a href="/posts/post-1/">Publicación 1</a></li>
+	<li><a href="/posts/post-2/">Publicación 2</a></li>
+      <li><a href="/posts/post-3/">Publicación 3</a></li>
+  </ul>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -61,6 +86,7 @@ import Card from '../components/Card.astro';
 			/>
 		</ul>
 	</main>
+	<Footer/>
 </Layout>
 
 <style>
@@ -120,4 +146,4 @@ import Card from '../components/Card.astro';
 		gap: 2rem;
 		padding: 0;
 	}
-</style>
+</style> -->
